@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Article Analysis</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="success">
+            <div class="info-box">
+                <p class="info"><strong>Model</strong>: {{ model_name }}</p>
+                <p class="info"><strong>Strategy</strong>: {{ strategy }}</p>
+            </div>
+
+            {% for document_analysis in document_analyses %}
+
+                <p class="info"><strong>Prediction</strong>: {{ document_analysis['prediction'] }}</p>
+
+                {% set sentence_analysis = document_analysis['sentence_analysis'] %}
+                {% for sentence in sentence_analysis %}
+                    <p class="sentence">{{ sentence['text'] }}</p>
+                    <div class="tokens">
+                        {% for token in sentence['tokens'] %}
+                            {% if token.startswith('Ġ') %}
+                                &nbsp;
+                                {% set token = token[1:] %}
+                            {% endif %}
+                            {% set token_style = 'included' if sentence['is_valid_token'][loop.index0] else 'excluded' %}
+                            <span class="{{ token_style }}">{{ token }}</span>&nbsp;
+                        {% endfor %}
+                    </div>
+
+                    <p class="info"><strong>Shift</strong>: {{ document_analysis['shifts'][loop.index0] }}</p>
+                {% endfor %}
+
+                <hr>
+
+            {% endfor %}
+
+            <br><br>
+            <a href="/">Back to Form</a>
+        </div>
+    </div>
+</body>
+</html>

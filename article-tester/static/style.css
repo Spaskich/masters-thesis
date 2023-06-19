@@ -1,0 +1,108 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    width: 500px;
+    padding: 40px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.form label {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.form input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.form input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Token Visualization */
+
+div.info-box {
+    padding: 10px;
+    margin-bottom: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+p.info {
+    text-align: right;
+}
+
+p.sentence {
+    font-weight: bold;
+    font-size: 14pt;
+}
+
+p.tokens {
+    font-family: "Courier New", monospace;
+    font-size: 10pt;
+}
+
+.included {
+    border-color: #000000;
+    border-style: solid;
+    border-width: 1px;
+    color: #000000;
+}
+
+.excluded {
+    border-color: #A0A0A0;
+    border-style: dotted;
+    border-width: 1px;
+    color: #A0A0A0;
+}
+
+
+/* Success Template */
+
+.success {
+    width: 500px;
+    padding: 20px 100px 20px 100px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+}
+
+.success h1 {
+    margin-bottom: 20px;
+}
+
+.success ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.success li {
+    margin-bottom: 10px;
+}
+
+.success a {
+    color: #4CAF50;
+    text-decoration: none;
+}

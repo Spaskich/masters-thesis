@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Test Multiple Articles</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Test Multiple Articles</h1>
+            <form id="jsonForm" name="jsonForm" method="POST" action="/success-multiple">
+                <label for="jsonData">JSON Data:</label>
+                <textarea id="jsonData" name="jsonData" rows="10" required></textarea>
+                <input type="submit" value="Submit" name="submit">
+            </form>
+            <br><br>
+            <a href="/">Test a Single Article</a>
+        </div>
+    </div>
+</body>
+</html>

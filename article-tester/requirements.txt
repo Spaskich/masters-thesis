@@ -1,0 +1,8 @@
+Flask~=2.3.2
+requests~=2.30.0
+numpy==1.23.5
+transformers==4.24.0
+unidecode
+torch
+scikit-learn
+tetracomnlp

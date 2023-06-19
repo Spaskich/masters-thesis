@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Test Article</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <div class="form">
+            <h1>Test an Article</h1>
+            <form method="POST" action="/success-single">
+                {% for i in range(number_of_sentences) %}
+
+                {% if i == 0 %}
+                    <label for="sentence{{ i }}">Title:</label>
+                {% else %}
+                    <label for="sentence{{ i }}">Sentence {{ i + 1 }}:</label>
+                {% endif %}
+                <input type="text" id="sentence{{ i }}" name="sentence{{ i }}" required>
+                {% endfor %}
+
+                <input type="submit" value="Submit" name="submit">
+            </form>
+            <br><br>
+            <a href="/multiple">Test Multiple Articles</a>
+        </div>
+    </div>
+</body>
+</html>
